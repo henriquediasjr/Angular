@@ -1,2 +1,19 @@
+
+<label> Server Name</label>
+<!-- <input type="text" class="form-control" (input)="onUpdateServerName($event)">-->
+<!-- está função basicamente muda o nome do input em todas os outros inputs -->
+
+
+<!-- já está com [(ngModel)] = "serverName" é aplicando o Two-Way-Databinding que reagem em ambas dire -->
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<button class="btn btn-primary" [disabled] = "!allowNewServer" 
+(click) = "OnCreateServer()"> Add Server</button>
+
+
+
+<p> {{ serverCreationStatus }}</p>
+
+ 
+
 <app-server></app-server>
 <app-server></app-server>
