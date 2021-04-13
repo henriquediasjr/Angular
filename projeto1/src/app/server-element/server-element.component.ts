@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ServerElementComponent implements OnInit {
 
-  @Input('srvElement')  element: {type:string, name:string, content:string}; //definindo a var do tipo que receberá javascript
+  @Input('srvElement') element:{type:string, name:string, content:string}; //definindo a var do tipo que receberá javascript
 
   constructor() { }
 
