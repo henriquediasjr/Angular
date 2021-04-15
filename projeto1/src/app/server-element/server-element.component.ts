@@ -1,4 +1,10 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, 
+  ContentChild, 
+  ElementRef, 
+  Input, 
+  OnInit, 
+  ViewChild,
+  ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -9,10 +15,17 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 export class ServerElementComponent implements OnInit {
 
   @Input('srvElement') element:{type:string, name:string, content:string}; //definindo a var do tipo que receberá javascript
+  @ViewChild('heading', {static: true}) header: ElementRef;
+  @ContentChild('paragraphContent', { static:true }) paragraph:ElementRef;
 
-  constructor() { }
+
+  constructor() {
+    console.log('constructor called')
+    console.log('Text Content : ' + this.header)
+   }
 
   ngOnInit(): void {
+    console.log('ngOnInit called ')
   }
 
 }
