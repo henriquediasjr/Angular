@@ -1,6 +1,7 @@
     <a 
     href="#" 
-    class="list-group-item clearfix">
+    class="list-group-item clearfix"
+    (click)="onSelected()">
         <div class="pull-left">
             <h4 class="list-froup-item-heading">{{ recipe.name }}</h4>
             <p class="list-group-item-text"> {{ recipe.description }} </p>
@@ -10,6 +11,6 @@
             [src]="recipe.imagePath" 
             alt="{{ recipe.name }}" 
             class="image-responsive" 
-            style="max-height: 50px;">
+            style="max-height: 50px; width: 50px;">
         </span>
     </a>
