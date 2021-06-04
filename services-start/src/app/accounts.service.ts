@@ -1,5 +1,4 @@
-
-export class AccountsService {
+ export class AccountsService {
     accounts = [
         {
           name: 'Master Account',
@@ -15,7 +14,7 @@ export class AccountsService {
         }
       ];
 
-    addAcount(name:string, status:string) {
+    addAccount(name:string, status:string) {
         this.accounts.push({name: name, status: status});
     }
     
