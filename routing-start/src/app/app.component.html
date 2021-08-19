@@ -10,14 +10,14 @@
         </li>
         <li role="presentation" routerLinkActive="active">
           <a [routerLink]="['/users']">Users</a>
-        </li><!--quando usar apenas users o angular ira adicionar o caminho do link como / e nome do que colocou, se usar /... o angular irá -->
+        </li><!--quando usar apenas users o angular ira adicionar o caminho do link como / e nome do que colocou, se usar /... o angular irá , later look for relative paths in angular-->
       </ul>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
       <router-outlet></router-outlet>
-      <!-- just marks the place where the routes are supposed to render in the page  -->
+      <!-- just marks the place where the routes are supposed to render in the page   -->
     </div>
   </div>
 </div>
