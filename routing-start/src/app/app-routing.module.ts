@@ -17,7 +17,10 @@ const appRoutes: Routes = [
       { path: ':id/:name', component: UserComponent },
     ] },
   
-    { path: 'servers', canActivate: [AuthGuard], component: ServersComponent, children: [ // THE CanActivate will make sure that the servers path and the children gets showed only if authGuard is true
+    { path: 'servers',
+    //  canActivate: [AuthGuard], 
+     canActivateChild: [AuthGuard],
+    component: ServersComponent, children: [ // THE CanActivate will make sure that the servers path and the children gets showed only if authGuard is true
       { path: ':id', component: ServerComponent},
       { path: ':id/edit', component: EditServerComponent }
     ] },
